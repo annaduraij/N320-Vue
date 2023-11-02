@@ -1,6 +1,6 @@
 Homework 6: Vue Basics
 ----
-https://in-info-web4.informatics.iupui.edu/~jayannad/N320/HW/6-VueBasics
+https://in-info-web4.informatics.iupui.edu/~jayannad/N320-Vue/HW/6-VueBasics
 ----
 
 ----

@@ -62,7 +62,7 @@ let vuePageHeaderData = {
 }
 
 // 5. Create a function that will print out the due date which will be seven days from the current date. Use your knowledge of Javascript to make this dynamic content.
-console.log(UtilJ.addDays)
+//console.log(UtilJ.addDays)
 
 // 6. This information will be displayed as follows:
 let mountsHeader = [
@@ -83,7 +83,7 @@ mountsHeader.forEach( (mount) => {
     let element = new HTMLasJS(
         mount.tag,
         mount.dir,
-        {},
+        {textAlign: "center", fontWeight: "400", padding: "5px", margin: "2px"},
         mount.data
     )
     //Attach the Mount
@@ -146,13 +146,22 @@ let mountsList = [
 //Computed Property
 vueOurList.computed = {
     colorsList: (colorsList,colorsMetaData) => {
-        console.log(colorsList)
+        console.log("Regenerating Colors List:",colorsList)
 
         //Function to Create the Unordered List Element
-        function colorsListElement(colorObj,id = '') {
+        function colorsListElement(colorObj = '',id='') {
 
-            //If the ID is a Number, add an ID Attribute
-            if (typeof id === 'number') { id = `id="${id}"`}
+            //Check if the colorObj has a User Property
+            if (colorObj.hasOwnProperty("user")){
+                console.log("Color was created by a user:", colorObj)
+
+                //If the ID is a Number, add an ID Attribute
+                if(colorObj.user.id !== undefined ) {
+                    id = `id="userColor-${colorObj.user.id}"`
+                }
+
+            } //else {console.log("Color does not have a User")}
+
             return `
                     <li ${id}>
                         <div 
@@ -187,26 +196,25 @@ vueOurList.computed = {
                         </div>
                     </li>
                 `;
-
-
         }
 
-        //Creat
+        //Generate the Unordered List Element for Each Color
         return colorsList.map( (color) => {
 
-            //Check if there is a property titled 'user'
-            if (color.user !== undefined) {
+            //Check if there is a property titled 'user' and if so ensure it's a Boolean with a value of true which means it's ready to be assigned an ID
+            if (color.user !== undefined && color.user === true) {
                 console.log(colorsMetaData);
+
+                //Increment the Metadata ID
                 colorsMetaData.id++;
                 //logColorInput(color,colorsMetaData);
 
-                //Generate an Element with the ID
-                return colorsListElement(color,colorsMetaData.id)
+                //Assign the ID back into the Color
+                color.user = {id: colorsMetaData.id};
             }
 
-            //Otherwise Do Not
-            else { return colorsListElement(color) }
-            //console.log(element);
+            //Then Return the Color
+            return colorsListElement(color)
 
         }).join("\n") //Join all the String HTML Elements together
     }
@@ -298,7 +306,6 @@ let selectionMsgHTML = new HTMLasJS(
         backgroundColor: 'black',
         color: 'white',
     },
-
 );
 
 //Build Selection Message onto the Page
@@ -450,21 +457,28 @@ vueOurList.customInput.label.html.get().appendChild(vueOurList.customInput.input
 vueOurList.customInput.label.html.get().appendChild(vueOurList.customInput.button.html.build());
 
 //Create a Computed Property to Capture the Parsed Color Object
-vueOurList.computed.colorInputObj = (colorInputString) => {
+vueOurList.computed.colorInputObj = (colorInputString,colorsMetaData) => {
     let colorObj = extractColorInfo(colorInputString);
     if (colorObj !== null) { colorObj.user = true }
+    if (colorObj === null && colorsMetaData !== undefined) {  }
+    console.log(colorObj);
    // console.log(colorObj);
     return colorObj;
 }
 
 //Create a Method to Push/Add the New Color Object into the Color List
-vueOurList.methods.addColor = (colorsList,colorInputObj) => {
+vueOurList.methods.addColor = (colorsList,colorInputObj,colorsMetaData) => {
 
     //If the Color Input Object is Null or is Simply Not an Object, Escape
     if (colorInputObj === null || typeof colorInputObj !== 'object') { return; }
 
     //Otherwise, Push the Color into the Colors List
     colorsList.push(colorInputObj)
+
+    //Set the colorsMetaData to Active if it is Defined and Ready to Go
+    if(colorsMetaData !== undefined) {
+        colorsMetaData.active = true;
+    }
 
     //Return the Color List just in case
     return colorsList;
@@ -487,7 +501,7 @@ vueOurList.computed.colorInputSubmitText = (colorInputObj) => {
 };
 
 // 16. When the user clicks the add to List button, the new item should be added to the list. However, the item contains an id and a name. Make sure the id continues in the same pattern and increases by one for each new addition.
-vueOurList.data.colorsMetaData = {id: 0};
+vueOurList.data.colorsMetaData = {author: "Jay", id: 0};
 
 //Updated functionality of colorsList computed Property to Adjust for an ID
 
@@ -495,43 +509,135 @@ vueOurList.data.colorsMetaData = {id: 0};
 //colorsList is already a computed property so automatically updates
 
 // 18. After the item is added to the list, a paragraph should appear that reads Candlebox has been added to your List!, for example.
-// //Build Selection Message onto the Page
+//Create a Data Property for the Addition Message
+vueOurList.data.colorAdditionMsgText = '';
 
-function logColorInput(colorInputObj,colorsMetaData) {
+//Build Addition Message HTML Container onto the Page
+let logAdditionMessageHTML = new HTMLasJS(
+    "p",
+    {
+        'v-show': 'colorsMetaData.active',
+        'v-html': 'colorAdditionMsgText',
+    },
+    {
+        cursor: "pointer",
+        outlineStyle: 'none',
+        display: 'block',
+        margin: '5px auto',
+        fontSize: "1.2em",
+        padding: '0.5em',
+        width: 'fit-content',
+        border: 'none',
+        borderRadius: '15px',
+        backgroundColor: 'black',
+        color: 'white',
+        opacity: '0.5'
+    }
+);
+
+//Build Log Addition Message onto the Page
+vueOurList.html.get().appendChild(logAdditionMessageHTML.build());
+
+vueOurList.computed.logColorAdditionMsg = (colorInputObj,colorsMetaData,appendElement=false) =>
+{
+    //If the Color Input Object is Not Ready, do Not Run the Function
+    if(colorInputObj === undefined || colorInputObj === null) {
+        return;
+    }
+
+    //Set the colorsMetaData to Active if it is Defined and Ready to Go
+    if(colorsMetaData === undefined || colorsMetaData === null) {
+        return;
+    }
+    //
+    // //If there is already stored text
+    // if(colorsMetaData.text !== undefined && colorsMetaData.active === false) {
+    //     return colorsMetaData.text;
+    // }
+
 
     //Define the Insertion Message
-    let text = colorObjToString(colorInputObj,"white") + " was inserted at " + new Date().toLocaleTimeString('en-US', { hour12: false });
+    let text = colorObjToString(colorInputObj, "white") + " was inserted at " + new Date().toLocaleTimeString('en-US', {hour12: false});
 
     //Check if there is a property titled 'user' and if there isn't, exit!
     if (colorInputObj.user === undefined) {
         console.log("Cannot validate creation of a color from the User")
     }
 
-    let insertionMsgHTML = new HTMLasJS(
-        "p",
-        {
-            id: `ColorInsertionMsg-${colorsMetaData.id}`
-        },
-        {
-            opacity: "0.5",
-            cursor: "pointer",
-            outlineStyle: 'none',
-            display: 'block',
-            margin: '5px auto',
-            fontSize: "1.2em",
-            padding: '0.5em',
-            width: 'fit-content',
-            border: 'none',
-            borderRadius: '15px',
-            backgroundColor: 'black',
-            color: 'white',
-        },
-        text
-    );
+    //If appendElement Flag is Enabled, it Adds the Message to the Bottom
+    if (appendElement) {
+        let insertionMsgHTML = new HTMLasJS(
+            "p",
+            {
+                id: `ColorInsertionMsg-${colorsMetaData.id}`
+            },
+            {
+                opacity: "0.5",
+                cursor: "pointer",
+                outlineStyle: 'none',
+                display: 'block',
+                margin: '5px auto',
+                fontSize: "1.2em",
+                padding: '0.5em',
+                width: 'fit-content',
+                border: 'none',
+                borderRadius: '15px',
+                backgroundColor: 'black',
+                color: 'white',
+            },
+            text
+        );
 
-    //Build Selection Message onto the Page
-    vueOurList.html.get().appendChild(insertionMsgHTML.build());
+        //Build Selection Message onto the Page
+        vueOurList.html.get().appendChild(insertionMsgHTML.build());
+    }
+
+    return text;
+
 }
+//
+// function logColorInput(colorInputObj,colorsMetaData,appendElement=false) {
+//
+//     //Set the colorsMetaData to Active
+//     colorsMetaData.active = true;
+//
+//     //Define the Insertion Message
+//     let text = colorObjToString(colorInputObj,"white") + " was inserted at " + new Date().toLocaleTimeString('en-US', { hour12: false });
+//
+//     //Check if there is a property titled 'user' and if there isn't, exit!
+//     if (colorInputObj.user === undefined) {
+//         console.log("Cannot validate creation of a color from the User")
+//     }
+//
+//     if(appendElement) {
+//         let insertionMsgHTML = new HTMLasJS(
+//             "p",
+//             {
+//                 id: `ColorInsertionMsg-${colorsMetaData.id}`
+//             },
+//             {
+//                 opacity: "0.5",
+//                 cursor: "pointer",
+//                 outlineStyle: 'none',
+//                 display: 'block',
+//                 margin: '5px auto',
+//                 fontSize: "1.2em",
+//                 padding: '0.5em',
+//                 width: 'fit-content',
+//                 border: 'none',
+//                 borderRadius: '15px',
+//                 backgroundColor: 'black',
+//                 color: 'white',
+//             },
+//             text
+//         );
+//
+//         //Build Selection Message onto the Page
+//         vueOurList.html.get().appendChild(insertionMsgHTML.build());
+//     }
+//
+//     return text;
+// }
 
 //Mount the List Component
 const vueListComponent = Vue.createApp({
@@ -545,7 +651,14 @@ const vueListComponent = Vue.createApp({
         //Adds User Inputted Color Element into the List
         addColor() {
             //Update the Original Colors List and also execute the Method
-            this.colors = vueOurList.methods.addColor(this.colors,this.colorInputObj)
+            console.log(this.colorInputObj)
+            this.colors = vueOurList.methods.addColor(this.colors,this.colorInputObj,this.colorsMetaData);
+            this.colorAdditionMsg();
+        },
+
+        //Message to Output to the Color Input
+        colorAdditionMsg() {
+            this.colorAdditionMsgText = vueOurList.computed.logColorAdditionMsg(this.colorInputObj,this.colorsMetaData,false);
         }
     },
     computed: {
@@ -562,7 +675,7 @@ const vueListComponent = Vue.createApp({
 
         //Parsed Color Input Object from the Text Input
         colorInputObj() {
-            return vueOurList.computed.colorInputObj(this.colorInput)
+            return vueOurList.computed.colorInputObj(this.colorInput,this.colorsMetaData)
         },
 
         //Message to Output to the Cycle Selection Color
@@ -570,10 +683,10 @@ const vueListComponent = Vue.createApp({
             return vueOurList.computed.colorInputSubmitText (this.colorInputObj)
         },
 
-        //Message to Output to the Color Input
-        colorInputMsg() {
-
-        }
+        // //Message to Output to the Color Input
+        // colorAdditionMsg() {
+        //     return vueOurList.computed.logColorAdditionMsg(this.colorInputObj,this.colorsMetaData)
+        // }
     }
 });
 
