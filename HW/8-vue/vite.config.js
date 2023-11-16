@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: 'http://localhost/Informatics/Projects/N320-Vue/HW/8-vue/dist/',
   plugins: [
     vue(),
   ],
