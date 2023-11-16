@@ -1,26 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="Web4 N320-Vue Mac" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" autoUpload="Always" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false" autoUploadExternalChanges="true">
     <option name="confirmBeforeUploading" value="false" />
     <serverData>
-      <paths name="Web4 N320 Mac">
+      <paths name="(Mac) Web4: N320-Vue/Final">
         <serverdata>
           <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="N320-Vue/HW/8-vue/" local="$PROJECT_DIR$" web="/N320-Vue/HW/8-vue/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="Web4 N320-Vue Mac">
+      <paths name="(Mac) Web4: N320-Vue">
         <serverdata>
           <mappings>
             <mapping deploy="N320-Vue/" local="$PROJECT_DIR$" web="/N320-Vue/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="XAMPP Mac">
+      <paths name="(Mac) Web4: N320-Base">
+        <serverdata>
+          <mappings>
+            <mapping deploy="N320-Base/" local="$PROJECT_DIR$" web="/N320-Base/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="(Mac) XAMPP: N320-Vue/Final">
+        <serverdata>
+          <mappings>
+            <mapping deploy="Informatics/Projects/N320-Vue/HW/8-vue" local="$PROJECT_DIR$" web="Informatics/Projects/N320-Vue/HW/8-vue/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="(Mac) XAMPP: N320-Vue">
         <serverdata>
           <mappings>
             <mapping deploy="Informatics/Projects/N320-Vue" local="$PROJECT_DIR$" web="Informatics/Projects/N320-Vue/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="(Mac) XAMPP: N320-Base">
+        <serverdata>
+          <mappings>
+            <mapping deploy="Informatics/Projects/N320-Base" local="$PROJECT_DIR$" web="Informatics/Projects/N320-Base/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="(Mac) XAMPP: Mounted Template">
+        <serverdata>
+          <mappings>
+            <mapping deploy="Informatics/Projects" local="$PROJECT_DIR$" web="Informatics/Projects/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="(Win) Web4: Informatics">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="(Win) XAMPP: N320-Vue/Final">
+        <serverdata>
+          <mappings>
+            <mapping deploy="Informatics\Projects\N320-Vue\HW\8-vue" local="$PROJECT_DIR$" web="/Informatics/Projects/N320-Vue/HW/8-vue/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="(Win) XAMPP: N320-Vue">
+        <serverdata>
+          <mappings>
+            <mapping deploy="Informatics\Projects\N320-Vue" local="$PROJECT_DIR$" web="/Informatics/Projects/N320-Vue/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="(Win) XAMPP: Mounted Template">
+        <serverdata>
+          <mappings>
+            <mapping deploy="Informatics\Projects" local="$PROJECT_DIR$" web="/Informatics/Projects/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="(Win) XAMPP: Direct">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
