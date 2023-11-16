@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "author": "Jay Annadurai",
+    "project": "N320-Vue-Final",
+    "file": "Sessions.json",
+    "date": "16 Nov 2023",
+    "description": "Contains Sample Sessions for Session System"
+  },
+
+  "data": [
+
+    {
+      "t": "Spongebob Test",
+      "p":  "I can't hear you!",
+      "r": "Ayyy Ayyy Captain!"
+    },
+    {
+      "t": "Akhil Test 1",
+      "p": "akpk",
+      "r": "***boss***"
+    },
+    {
+      "t": "Akhil Test 2",
+      "p": "sugma",
+      "r": "ligma"
+    },
+    {
+      "t": "Akhil Test 3",
+      "p": "What's up?",
+      "r": "🐔🍑"
+    },
+
+    {
+      "t": "Echo Test",
+      "p": "Echo",
+      "r": "Echo Echo",
+      "eval": "(msg) => { Jds.log(\"Echo Echo Echo\") }"
+    }
+
+  ]
+}
