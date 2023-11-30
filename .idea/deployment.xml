@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="(Win) XAMPP: N320-Vue" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false" autoUploadExternalChanges="true">
-    <option name="confirmBeforeUploading" value="false" />
+  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
       <paths name="(Win) XAMPP: Direct">
         <serverdata>
@@ -20,28 +19,7 @@
       <paths name="(Win) XAMPP: N320-Vue">
         <serverdata>
           <mappings>
-            <mapping deploy="Informatics\Projects\N320-Vue\" local="$PROJECT_DIR$" web="/Informatics/Projects/N320-Vue/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="Web4 N320">
-        <serverdata>
-          <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="Web4 N320 Mac">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="Web4 N320-Vue Mac">
-        <serverdata>
-          <mappings>
-            <mapping deploy="N320-Vue/" local="$PROJECT_DIR$" web="/N320-Vue/" />
           </mappings>
         </serverdata>
       </paths>
@@ -52,14 +30,6 @@
           </mappings>
         </serverdata>
       </paths>
-      <paths name="XAMPP Mac">
-        <serverdata>
-          <mappings>
-            <mapping deploy="Informatics/Projects/N320-Vue" local="$PROJECT_DIR$" web="Informatics/Projects/N320-Vue/" />
-          </mappings>
-        </serverdata>
-      </paths>
     </serverData>
-    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>
