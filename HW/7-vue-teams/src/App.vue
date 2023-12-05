@@ -155,10 +155,10 @@ body {
       var(--_g1),var(--_g1) var(--s) var(--s) #181818;
   background-size: calc(2*var(--s)) calc(2*var(--s));
 
-  //background-image: linear-gradient(30deg, #272727 12%, transparent 12.5%, transparent 87%, #272727 87.5%, #272727), linear-gradient(150deg, #272727 12%, transparent 12.5%, transparent 87%, #272727 87.5%, #272727), linear-gradient(30deg, #272727 12%, transparent 12.5%, transparent 87%, #272727 87.5%, #272727), linear-gradient(150deg, #272727 12%, transparent 12.5%, transparent 87%, #272727 87.5%, #272727), linear-gradient(60deg, #27272777 25%, transparent 25.5%, transparent 75%, #27272777 75%, #27272777), linear-gradient(60deg, #27272777 25%, transparent 25.5%, transparent 75%, #27272777 75%, #27272777);
-  //background-size: 28px 49px;
-  //background-position: 0 0, 0 0, 14px 25px, 14px 25px, 0 0, 14px 25px;
-  /* background-size: 100%;
+  /*background-image: linear-gradient(30deg, #272727 12%, transparent 12.5%, transparent 87%, #272727 87.5%, #272727), linear-gradient(150deg, #272727 12%, transparent 12.5%, transparent 87%, #272727 87.5%, #272727), linear-gradient(30deg, #272727 12%, transparent 12.5%, transparent 87%, #272727 87.5%, #272727), linear-gradient(150deg, #272727 12%, transparent 12.5%, transparent 87%, #272727 87.5%, #272727), linear-gradient(60deg, #27272777 25%, transparent 25.5%, transparent 75%, #27272777 75%, #27272777), linear-gradient(60deg, #27272777 25%, transparent 25.5%, transparent 75%, #27272777 75%, #27272777);
+  background-size: 28px 49px;
+  background-position: 0 0, 0 0, 14px 25px, 14px 25px, 0 0, 14px 25px;
+  background-size: 100%;
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(10,10,10,1) 25%, rgba(30,30,30,1) 100%); */
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
   sans-serif;

@@ -10,7 +10,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base: 'http://localhost/Informatics/Projects/N320-Vue/HW/7-vue-teams/dist/',
+  base: '~jayannad/N320-Vue/HW/7-vue-teams/',
   plugins: [
     vue(),
   ],

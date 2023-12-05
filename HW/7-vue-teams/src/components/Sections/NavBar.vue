@@ -7,14 +7,13 @@
   <div class="navbar">
 
     <div class="nav-section">
-      <RouterLink to="/" class="nav-button"> Home</RouterLink>
+      <RouterLink to="/members" class="nav-button"> Members</RouterLink>
     </div>
 
     <div class="nav-section">
-      <a id="nav-title">
-        <span id="vue"> Vue </span>
-          by Jay
-      </a>
+      <RouterLink to="/" id="nav-title" class="nav-button">
+      Vue by Jay
+      </RouterLink>
     </div>
 
     <div class="nav-section">
@@ -43,8 +42,7 @@ export default {
   margin-bottom: 20px;
 
   background: #000;
-  //background: linear-gradient(0deg, rgba(80,80,80,0.9) 0%, rgba(100,100,100,0.8) 25%, rgba(250,250,250,0.5) 100%);
-
+  /*background: linear-gradient(0deg, rgba(80,80,80,0.9) 0%, rgba(100,100,100,0.8) 25%, rgba(250,250,250,0.5) 100%); */
   box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds shadow for depth */
 }
 
@@ -61,9 +59,9 @@ export default {
 .nav-button {
   display: inline-block;
   padding: 5px 10px;
-  //background-color: #000; /* Adjust button background color as needed */
+  /*background-color: #000; */
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 20px;
   transition: color 0.3s, border 0.3s, box-shadow 0.1s;
 }
 

@@ -99,7 +99,7 @@ export default {
   margin: 10px;
   padding: 10px;
   background: rgba(0,0,0,0.6) !important;
-//width: 80%; /* Adjust width as needed */
+ /* width: 80%; */
 }
 
 

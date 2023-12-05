@@ -29,8 +29,8 @@
     button:hover {
         border: 1px solid white;
         cursor: pointer;
-        //font-size: 0.85em;
-        //padding: 5px;
+        /*font-size: 0.85em;
+        padding: 5px; */
         box-shadow:
             0 0 3px white,
             0 0 5px white;;
