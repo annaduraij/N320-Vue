@@ -5,11 +5,12 @@
 
 <script setup>
 import InputForm from '../components/InputForm.vue'
-import Roster from '../components/Roster.vue'
+import MemberRoster from '../components/Member/Roster.vue'
 </script>
 
 <template>
 <main>
+
   <!-- Form to Input Team Name and Member Type -->
   <InputForm
       :members="members"
@@ -19,12 +20,13 @@ import Roster from '../components/Roster.vue'
   />
 
   <!-- Roster that Displays Entire or Subset of Members -->
-  <Roster
+  <MemberRoster
     :members="members"
     :definedTeamName="definedTeamName"
     :selectedRole="selectedRole"
     @addMemberToTeam="addMemberToTeam"
     @removeMemberFromTeam="removeMemberFromTeam"
+    @unsetLeaderFromTeam="unsetLeaderFromTeam"
   />
 </main>
 </template>
@@ -49,6 +51,12 @@ export default {
 
   props: ['members','teams'],
 
+  emits: [
+      'addMemberToTeam',
+      'removeMemberFromTeam',
+      'unsetLeaderFromTeam'
+  ],
+
   methods: {
 
     //Method to Add Member to a Team
@@ -59,6 +67,11 @@ export default {
     //Method to Remove Member from a Team
     removeMemberFromTeam(member) {
       this.$emit('removeMemberFromTeam',member);
+    },
+
+    unsetLeaderFromTeam(member){
+      //Fires Emit to Parent Component with Member Object to unset as Leader
+      this.$emit('unsetLeaderFromTeam',member);
     },
 
     //Watcher Updater

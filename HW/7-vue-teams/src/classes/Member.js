@@ -34,16 +34,25 @@ class Member {
         this.email = email;
         this.role = role;
         this.team = team;
+        this.leader = false;
     }
 
     // Method to assign a member to a team
     assignToTeam(teamName) {
         this.team = teamName;
+        return this;
     }
 
     // Method to remove a member from a team
     removeFromTeam() {
         this.team = '';
+        return this;
+    }
+
+    // Setter for Leader Status
+    setLeader(leaderStatus){
+        this.leader = leaderStatus;
+        return this;
     }
 
 
@@ -59,6 +68,30 @@ class Member {
         const finalNumber = phoneNumber.slice(8, 12);
 
         return `(${areaCode}) ${middleNumber}-${finalNumber}`;
+    }
+
+
+    /**
+     * Accepts a Member Object or a Member ID and then returns the Member ID
+     * @param memberObjOrID
+     * @return {int} memberID
+     */
+    static returnMemberID(memberObjOrID) {
+        //Initialize the MemberID
+        let memberID;
+
+        // Check if 'member' is a Member object and extract the ID, otherwise treat it as a member ID
+        if (memberObjOrID instanceof Member) {
+            memberID = memberObjOrID.id;
+        } else if (typeof memberObjOrID === 'number') {
+            memberID = memberObjOrID;
+        } else {
+            console.log("The argument must be a Member object or a member ID");
+            return null;
+        }
+
+        //Return the MemberID
+        return memberID;
     }
 }
 

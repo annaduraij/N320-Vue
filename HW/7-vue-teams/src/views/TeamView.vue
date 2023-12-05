@@ -5,26 +5,19 @@
 
 <script setup>
 import InputForm from '../components/InputForm.vue'
-import Roster from '../components/Roster.vue'
+import TeamRoster from '../components/Team/Roster.vue'
+import TeamInfo from "@/components/Team/Info.vue";
 </script>
 
 <template>
 <main>
-  <!-- Form to Input Team Name and Member Type -->
-  <InputForm
-      :members="members"
-      :teams="teams"
-      @update:selectedRole="setSelectedRole"
-      @update:definedTeamName="setDefinedTeamName"
-  />
 
-  <!-- Roster that Displays Entire or Subset of Members -->
-  <Roster
-    :members="members"
-    :definedTeamName="definedTeamName"
-    :selectedRole="selectedRole"
-    @addMemberToTeam="addMemberToTeam"
-    @removeMemberFromTeam="removeMemberFromTeam"
+  <!-- Roster that Displays List of Teams -->
+  <TeamRoster
+      :teams="teams"
+      @removeMemberFromTeam="removeMemberFromTeam"
+      @setLeaderToTeam = "setLeaderToTeam"
+      @unsetLeaderFromTeam = "unsetLeaderFromTeam"
   />
 </main>
 </template>
@@ -40,25 +33,33 @@ export default {
 
   data() {
     return {
-      //Role to Filter By
-      selectedRole: '',
-      //User Defined Team Name
-      definedTeamName: ''
+
     }
   },
 
-  props: ['members','teams'],
+  // created () {
+  //   console.log(this.teams);
+  // },
+
+  props: ['teams'],
 
   methods: {
 
-    //Method to Add Member to a Team
-    addMemberToTeam(member, definedTeamName) {
-      this.$emit('addMemberToTeam', member, definedTeamName);
+    //Removes a Member to a Team
+    removeMemberFromTeam(member,team) {
+      console.log("V",member);
+      //Fires Emit to Parent Component with Member Object to Remove
+      this.$emit('removeMemberFromTeam', member);
     },
-
-    //Method to Remove Member from a Team
-    removeMemberFromTeam(member) {
-      this.$emit('removeMemberFromTeam',member);
+    //Sets/Unsets a Leader from the Team
+    setLeaderToTeam(member,team) {
+      console.log("TV Set Leader", member, team);
+      //Fires Emit to Parent Component with Member Object to set as Leader
+      this.$emit('setLeaderToTeam', member,team);
+    },
+    unsetLeaderFromTeam(member,team){
+      //Fires Emit to Parent Component with Member Object to unset as Leader
+      this.$emit('unsetLeaderFromTeam',member,team);
     },
 
     //Watcher Updater

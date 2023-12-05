@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f96e6f9-cab4-4a5c-8a14-24e6ab81872c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/N320-Vue.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JS N320 - Vue.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sshConfigs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/components/Sections/NavBar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/components/Team/Info.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/components/Team/Roster.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/7-vue-teams/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/7-vue-teams/src/classes/Member.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/classes/Member.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/7-vue-teams/src/classes/Team.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/classes/Team.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/7-vue-teams/src/classes/Teams.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/classes/Teams.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/7-vue-teams/src/components/InputForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/components/InputForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/7-vue-teams/src/components/Member.vue" beforeDir="false" afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/components/Member/Info.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/7-vue-teams/src/components/Roster.vue" beforeDir="false" afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/components/Member/Roster.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/7-vue-teams/src/components/SlotButton.vue" beforeDir="false" afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/components/Templates/ButtonSlot.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/7-vue-teams/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/7-vue-teams/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/views/HomeView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/7-vue-teams/src/views/TeamView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/views/TeamView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701351546631</updated>
-      <workItem from="1701351547946" duration="682000" />
+      <workItem from="1701351547946" duration="1702000" />
     </task>
     <servers />
   </component>
