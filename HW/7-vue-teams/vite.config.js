@@ -1,7 +1,7 @@
-<!-- Auth: Jay Annadurai            -->
-<!-- Proj: N320: Vue - Teams        -->
-<!-- Date: 28 November 2023         -->
-<!-- Desc: Vue Configuration File   -->
+/* Auth: Jay Annadurai            */
+/* Proj: N320: Vue - Teams        */
+/* Date: 28 November 2023         */
+/* Desc: Vue Configuration File   */
 
 import { fileURLToPath, URL } from 'node:url'
 

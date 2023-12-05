@@ -1,7 +1,7 @@
-<!-- Auth: Jay Annadurai            -->
-<!-- Proj: N320: Vue - Teams        -->
-<!-- Date: 28 November 2023         -->
-<!-- Desc: Vue JS Loading File      -->
+/* Auth: Jay Annadurai            */
+/* Proj: N320: Vue - Teams        */
+/* Date: 28 November 2023         */
+/* Desc: Vue JS Loading File      */
 
 import InputForm from './components/InputForm.vue';
 import Roster from './components/Roster.vue';
