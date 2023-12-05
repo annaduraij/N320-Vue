@@ -1,5 +1,5 @@
 # Homework 7 & Homework 8 - Web4 Link:
-https://in-info-web4.informatics.iupui.edu/~jayannad/N320-Vue/HW/7-vue-teams/members
+https://in-info-web4.informatics.iupui.edu/~jayannad/N320-Vue/HW/7-vue-teams/
 
 # Homework 7 | Assignment
 
