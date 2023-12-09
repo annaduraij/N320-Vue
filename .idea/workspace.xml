@@ -5,13 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f96e6f9-cab4-4a5c-8a14-24e6ab81872c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/HW/8-vue-final/.vscode/extensions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/8-vue-final/ReadMe.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/8-vue-final/ReadMeVue.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/8-vue-final/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/8-vue-final/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/8-vue-final/src/classes/Member.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/8-vue-final/src/classes/Team.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/8-vue-final/src/classes/Teams.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/8-vue-final/src/components/InputForm.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/8-vue-final/src/components/Member/Info.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/8-vue-final/src/components/Member/Roster.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/8-vue-final/src/components/Sections/NavBar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/8-vue-final/src/components/Team/Info.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/8-vue-final/src/components/Team/Roster.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW/8-vue-final/src/components/Templates/ButtonSlot.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW/7-vue-teams/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW/7-vue-teams/src/components/Sections/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/components/Sections/NavBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW/7-vue-teams/src/components/Team/Info.vue" beforeDir="false" afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/components/Team/Info.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW/7-vue-teams/src/components/Templates/ButtonSlot.vue" beforeDir="false" afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/components/Templates/ButtonSlot.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW/7-vue-teams/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW/7-vue-teams/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW/7-vue-teams/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW/7-vue-teams/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/7-vue-teams/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HW/7-vue-teams/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/.eslintrc.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/HW/8-vue-final/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/.prettierrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/HW/8-vue-final/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/HW/8-vue-final/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/src/assets/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/src/assets/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/src/assets/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/src/components/TheWelcome.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/src/components/WelcomeItem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/src/components/icons/IconCommunity.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/src/components/icons/IconDocumentation.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/src/components/icons/IconEcosystem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/src/components/icons/IconSupport.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/src/components/icons/IconTooling.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/src/data/Sessions.json" beforeDir="false" afterPath="$PROJECT_DIR$/HW/8-vue-final/src/data/Sessions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW/8-vue/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/HW/8-vue-final/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +72,24 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/ajaya/Documents/Informatics/Projects/N320-Vue/HW/8-vue/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ajaya\Documents\Informatics\Projects\N320-Vue\HW\8-vue\src" />
+      <recent name="C:\Users\ajaya\Documents\Informatics\Projects\N320-Vue\HW\8-vue" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ajaya\Documents\Informatics\Projects\N320-Vue\HW\8-vue-final\.idea" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -53,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701351546631</updated>
-      <workItem from="1701351547946" duration="1702000" />
+      <workItem from="1701351547946" duration="2959000" />
     </task>
     <servers />
   </component>
