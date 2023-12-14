@@ -3,53 +3,53 @@
 <!-- Date: 28 November 2023         -->
 <!-- Desc: User Input Form for Team -->
 
+
 <template>
 
-<!-- Input Form to Define a Team and Filter by Member Roles-->
-<div class="FormContainer">
+  <!-- Input Form to Define a Team and Filter by Member Roles-->
+  <div class="FormContainer">
 
     <!-- On Form Submission, Perform the Emit User Input Method Instead-->
     <form @submit.prevent="">
 
-        <!-- Form Title -->
-        <div id="FormTitle"> Jay's Team Roster </div>
+      <!-- Form Title -->
+      <div id="FormTitle"> Member Roster </div>
 
-        <!-- Inner Form Container -->
-        <div id="InnerFormContainer">
-            <!-- Input Containers -->
-            <div id="InputsContainer"> 
+      <!-- Inner Form Container -->
+      <div id="InnerFormContainer">
+        <!-- Input Containers -->
+        <div id="InputsContainer">
 
-                <!-- Text Input for the Team's Name that the Members can be Assigned To -->
-                <div id="TeamInputContainer">
-                    <label for="definedTeamNameInput">
-                        <input type="text" id="definedTeamNameInput" v-model="definedTeamName" placeholder="Define a Team Name..."/>
-                    </label>
-                </div>
+          <!-- Text Input for the Team's Name that the Members can be Assigned To -->
+          <div id="TeamInputContainer">
+            <label for="definedTeamNameInput">
+              <input type="text" id="definedTeamNameInput" v-model="definedTeamName" placeholder="Define a Team Name..."/>
+            </label>
+          </div>
 
-                <!-- Filter the List of Members by their Team Role -->
-                <div id="MemberFilterContainer">
-                    <select id="MemberFilter" v-model="selectedRole" name="role">
-                        <option disabled value="">Filter Members by Role...</option>
-                        <option value="All"> All Roles </option>
-                        <option v-for="role in uniqueRoles" :key="role" :value="role">{{ role }}</option>
-                    </select>
-                </div>
-
-            </div>
-
-<!--            &lt;!&ndash; Form Submit Button to Activate &ndash;&gt;-->
-<!--            <div id="FormSubmit">-->
-<!--                <slot-button id="FormSubmit" type="submit">Go!</slot-button>-->
-<!--            </div>-->
+          <!-- Filter the List of Members by their Team Role -->
+          <div id="MemberFilterContainer">
+            <select id="MemberFilter" v-model="selectedRole" name="role">
+              <option disabled value="">Filter Members by Role...</option>
+              <option value="All"> All Roles </option>
+              <option v-for="role in uniqueRoles" :key="role" :value="role">{{ role }}</option>
+            </select>
+          </div>
 
         </div>
 
+        <!--            &lt;!&ndash; Form Submit Button to Activate &ndash;&gt;-->
+        <!--            <div id="FormSubmit">-->
+        <!--                <button-slot id="FormSubmit" type="submit">Go!</button-slot>-->
+        <!--            </div>-->
+
+      </div>
+
     </form>
 
-</div> <!-- End of Form Container -->
+  </div> <!-- End of Form Container -->
 
 </template>
-
 
 <script>
 
@@ -103,7 +103,7 @@ export default {
 
 }
 
-</script>
+</script >
 
 <style scoped>
 

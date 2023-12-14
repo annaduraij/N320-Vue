@@ -53,22 +53,24 @@ class Teams {
 
     /**
      * Find a team by name or create a new one if it doesn't exist
-     * @param {string} teamName - Name of the team to find or create
+     * @param {string} teamNameToCheck - Name of the team to find or create
      * @return {Team} The found or newly created team
      */
-    findOrCreate(teamName) {
+    findOrCreate(teamNameToCheck) {
         // Search for a team with the specified name
-        let team = this.list.find(t => t.name === teamName);
+        let checkTeam = this.list.find(team => team.name === teamNameToCheck);
 
         // If the team is not found, create and add it to the list array
-        if (!team) {
-            team = new Team(teamName);
-            this.add(team);
+        if (!checkTeam) {
+            checkTeam = new Team(teamNameToCheck);
+            this.add(checkTeam);
         }
 
         // Return the found or created team
-        return team;
+        return checkTeam;
     }
+
+
 
     /**
      * Find a team by a member or member ID
@@ -76,17 +78,7 @@ class Teams {
      * @return {Team|null} The team containing the member, or null if not found.
      */
     findTeamByMember(memberToFind) {
-        let memberToFindID;
-
-        // Check if the argument is a Member object and extract the ID, otherwise treat it as a memberToFind ID
-        if (memberToFind instanceof Member) {
-            memberToFindID = memberToFind.id;
-        } else if (typeof memberToFind === 'number') {
-            memberToFindID = memberToFind;
-        } else {
-            console.log("The argument must be a Member object or a member ID");
-            return null;
-        }
+        let memberToFindID = Member.returnMemberID(memberToFind);
 
         //Search through each team's members for a member with the given ID
         for (const team of this.list) {
@@ -138,17 +130,9 @@ class Teams {
      * @return {Team|null} - The removed Team object, or null if not found
      */
     remove(teamToRemove) {
-        let teamToRemoveName;
 
-        // Check if 'team' is a Team object and extract the team name, otherwise treat it as a team name string
-        if (teamToRemove instanceof Team) {
-            teamToRemoveName = teamToRemove.name;
-        } else if (typeof teamToRemove === 'string') {
-            teamToRemoveName = teamToRemove;
-        } else {
-            console.log("The argument must be a Team object or a team name string");
-            return null;
-        }
+        //Standardize the Input to the Name of the Team using the Return Team Name static Method
+        let teamToRemoveName = Team.returnTeamName(teamToRemove);
 
         // Find the team object with the specified name
         const foundTeamToRemove = this.list.find(team => team.name === teamToRemoveName);

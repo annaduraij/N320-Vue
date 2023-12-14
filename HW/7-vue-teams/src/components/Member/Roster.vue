@@ -15,14 +15,15 @@
 <div class="MembersContainer GridContainer" v-if="filteredMembers.length > 0">
     
     <!-- Iterate Through Member Objects with the Key being the Member ID-->
-    <member-info
+    <MemberInfo
         v-for="member in filteredMembers" :key="member.id"
         :member="member"
         :selectedRole="selectedRole"
         :definedTeamName="definedTeamName"
         @addMemberToTeam="addMemberToTeam"
         @removeMemberFromTeam="removeMemberFromTeam"
-    ></member-info>
+        @unsetLeaderFromTeam="unsetLeaderFromTeam"
+    />
 
 </div>
 
@@ -35,6 +36,8 @@
 </template>
 
 <script>
+//Import Member
+import MemberInfo from './Info.vue';
 
 //Import the Classes to Process the Members/Team/Teams Data
 import Member from '@/classes/Member.js';
@@ -43,13 +46,22 @@ import Teams from '@/classes/Teams.js';
 
 export default {
 
+    components: {
+      MemberInfo
+    },
+
     data() {
         return { }
     },
 
     props: ['members', 'definedTeamName', 'selectedRole'],
 
-    emits: ['addMemberToTeam', 'removeMemberFromTeam'],
+    emits: [
+      'addMemberToTeam',
+      'removeMemberFromTeam',
+      'unsetLeaderFromTeam'
+    ],
+
 
     computed: {
       //Automatically Filter the Members Array based on the Selected Role Filter
@@ -77,6 +89,11 @@ export default {
         removeMemberFromTeam(member) {
             this.$emit('removeMemberFromTeam', member);
         },
+
+        unsetLeaderFromTeam(member){
+          //Fires Emit to Parent Component with Member Object to unset as Leader
+          this.$emit('unsetLeaderFromTeam', member);
+        }
     }
 }
 </script>

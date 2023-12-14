@@ -1,7 +1,7 @@
-<!-- Auth: Jay Annadurai            -->
-<!-- Proj: N320: Vue - Teams        -->
-<!-- Date: 28 November 2023         -->
-<!-- Desc: Vue Configuration File   -->
+/* Auth: Jay Annadurai            */
+/* Proj: N320: Vue - Teams        */
+/* Date: 28 November 2023         */
+/* Desc: Vue Configuration File   */
 
 import { fileURLToPath, URL } from 'node:url'
 
@@ -10,7 +10,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base: 'http://localhost/Informatics/Projects/N320-Vue/HW/7-vue-teams/dist/',
+  base: '~jayannad/N320-Vue/HW/7-vue-teams/',
   plugins: [
     vue(),
   ],
